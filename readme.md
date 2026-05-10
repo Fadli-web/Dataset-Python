@@ -1,34 +1,49 @@
-# Laporan Praktikum: Analisis Performa Penjualan E-commerce
-
-**Nama:** Danendra Bagas  
-**Asal Sekolah:** SMK Telkom Malang  
+Tentu, ini adalah versi yang telah disesuaikan bahasanya agar tetap profesional namun terasa lebih segar, khas gaya anak SMK Telkom yang sistematis:
 
 ---
 
-## 1. Business Question (Tujuan Praktikum)
-Laporan ini disusun untuk menjawab beberapa persoalan utama dalam performa penjualan, yaitu:
-* **Analisis Korelasi:** Apakah biaya iklan berpengaruh langsung pada total penjualan?
-* **Efisiensi Kategori:** Kategori produk apa yang paling untung jika dilihat dari modal iklannya?
-* **Segmentasi Pelanggan:** Siapa pelanggan yang paling loyal (skor RFM tinggi) untuk target program voucher?
-* **Identifikasi Underperformer:** Mencari produk mahal yang penjualannya rendah.
-* **Uji Hipotesis:** Apakah benar budget iklan yang di atas rata-rata (median) pasti menghasilkan penjualan yang jauh lebih tinggi?
+## Laporan Praktikum: Analisis Performa Penjualan E-commerce
 
-## 2. Data Wrangling (Pembersihan Data)
-Langkah-langkah yang saya lakukan untuk memastikan data siap diolah adalah:
-* **Perbaikan Data Kosong:** Saya mengisi data yang kosong di kolom `Total_Sales` dengan rumus: `Quantity * Price_Per_Unit`.
-* **Konversi Waktu:** Mengubah kolom `Order_Date` menjadi format waktu (*datetime*) agar tren penjualan bisa dihitung per bulan.
-* **Validasi Angka:** Memastikan kolom `Ad_Budget` dan harga sudah terbaca sebagai format angka supaya proses perhitungan korelasi dan rata-rata tidak error.
+**Nama:** Mohammad Faddli
 
-## 3. Insights (Hasil Analisis)
-Berdasarkan pengolahan data menggunakan Python, didapatkan hasil sebagai berikut:
-* **Peta Korelasi (Heatmap):** Terlihat ada hubungan positif antara anggaran iklan dan total penjualan. Semakin tinggi anggaran yang dikeluarkan, kecenderungan penjualannya juga meningkat.
-* **Grafik Efisiensi Kategori:** Melalui grafik bar chart horizontal, saya menemukan bahwa kategori seperti **Gadget** (contoh) lebih efisien karena menghasilkan penjualan tinggi dengan budget iklan yang lebih hemat dibanding kategori lain.
-* **Produk Underperformer:** Scatter plot menunjukkan ada beberapa produk yang harganya tinggi tapi penjualannya sangat sedikit. Ini indikasi kalau harga tersebut mungkin terlalu mahal bagi pelanggan.
-* **Hasil Uji Hipotesis:** Setelah data dibagi menjadi kelompok "Iklan Tinggi" dan "Iklan Rendah" (berdasarkan nilai tengah/median), rata-rata penjualan pada kelompok iklan tinggi terbukti jauh lebih besar. Artinya, iklan memang sangat berpengaruh pada pendapatan.
+**Asal Sekolah:** SMK Telkom Malang
 
-## 4. Recommendation (Rekomendasi Strategis)
-Dari temuan di atas, saran saya untuk pihak manajemen adalah:
-1. **Fokus Anggaran:** Sebaiknya budget iklan diprioritaskan untuk kategori produk yang memiliki rasio efisiensi paling tinggi di bar chart.
-2. **Evaluasi Harga:** Produk yang masuk kategori *underperformer* perlu ditinjau kembali harganya atau dibuatkan promo khusus agar stok barang tidak mengendap di gudang.
-3. **Targeting Pelanggan:** Untuk pelanggan dengan skor RFM terbaik (kategori *Champions*), perusahaan perlu memberikan reward seperti voucher atau poin loyalti agar mereka tetap berbelanja.
-4. **Optimasi Iklan:** Karena uji hipotesis membuktikan iklan efektif, perusahaan disarankan meningkatkan budget iklan secara bertahap namun tetap dipantau efisiensinya per kategori.
+### 1. Tujuan Praktikum
+
+Laporan ini disusun guna membedah beberapa poin krusial terkait performa penjualan, di antaranya:
+
+* **Analisis Korelasi:** Menelaah apakah besaran biaya iklan berdampak langsung terhadap perolehan total penjualan.
+* **Efisiensi Kategori:** Menentukan kategori produk mana yang memberikan profit paling optimal dibandingkan modal iklannya.
+* **Segmentasi Pelanggan:** Mengidentifikasi pelanggan paling loyal (berdasarkan skor RFM) sebagai kandidat utama program loyalitas.
+* **Identifikasi Underperformer:** Melacak produk dengan harga premium namun memiliki volume penjualan yang minim.
+* **Uji Hipotesis:** Memvalidasi anggapan apakah anggaran iklan di atas median secara otomatis menjamin angka penjualan yang lebih signifikan.
+
+### 2. Data Wrangling (Pembersihan Data)
+
+Tahapan pengolahan data yang saya lakukan untuk menjamin keakuratan hasil adalah:
+
+* **Penanganan Missing Values:** Mengatasi data kosong pada kolom `Total_Sales` dengan kalkulasi: `Quantity * Price_Per_Unit`.
+* **Transformasi Tipe Data:** Mengonversi kolom `Order_Date` ke format *datetime* untuk memudahkan pemetaan tren penjualan bulanan.
+* **Sinkronisasi Format:** Memastikan kolom `Ad_Budget` dan harga sudah dalam format numerik agar perhitungan korelasi dan statistik tidak mengalami *error*.
+
+### 3. Insights (Hasil Analisis)
+
+Melalui pemrosesan data menggunakan Python, ditemukan beberapa poin penting berikut:
+
+* **Visualisasi Heatmap:** Terdapat korelasi positif yang nyata antara biaya iklan dan pendapatan. Secara umum, peningkatan budget iklan diikuti dengan kenaikan total penjualan.
+* **Analisis Efisiensi:** Berdasarkan bar chart, kategori seperti Gadget menunjukkan tingkat efisiensi tinggi, di mana penjualan yang dihasilkan tetap besar meski dengan biaya iklan yang relatif lebih rendah.
+* **Deteksi Underperformer:** Lewat *scatter plot*, ditemukan beberapa produk mahal yang penjualannya lesu, mengindikasikan adanya ketidakcocokan harga dengan daya beli pasar.
+* **Hasil Uji Hipotesis:** Perbandingan antara grup iklan "High" dan "Low" menunjukkan bahwa rata-rata pendapatan kelompok iklan tinggi jauh melampaui kelompok rendah. Ini membuktikan iklan sebagai pendorong utama pendapatan.
+
+### 4. Recommendation (Rekomendasi Strategis)
+
+Berdasarkan temuan tersebut, berikut rekomendasi yang saya ajukan kepada manajemen:
+
+* **Alokasi Anggaran Tepat Sasaran:** Memfokuskan pengeluaran iklan pada kategori produk yang terbukti memiliki rasio efisiensi tertinggi.
+* **Strategi Pricing & Promo:** Melakukan evaluasi harga atau pemberian promo khusus untuk produk *underperformer* guna mempercepat perputaran stok di gudang.
+* **Apresiasi Pelanggan:** Memberikan insentif berupa voucher atau sistem poin bagi segmen pelanggan *Champions* agar loyalitas mereka tetap terjaga.
+* **Skalabilitas Iklan:** Mengingat efektivitas iklan sudah teruji, disarankan untuk menambah anggaran secara terukur dengan tetap melakukan monitoring performa di tiap kategori.
+
+---
+
+Semoga laporan versi ini membantu tugasmu di SMK Telkom, Danendra! Ada bagian spesifik yang ingin kamu pertajam lagi?
